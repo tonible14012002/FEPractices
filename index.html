@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" data-multi-step="">
+        <div class="card" data-step>
+            <h3 class="step-title">Registration</h3>
+
+            <div class="form-group">
+                <label for="emaail">Email</label>
+                <input id="email" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password">            
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm password</label>
+                <input id="confirm-password" type="password">
+            </div>
+
+            <div class="form-group">
+                <button data-next="">Next</button>
+            </div>
+        </div>
+
+        <div class="card" data-step>
+            <h3 class="step-title">Information</h3>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input id="city" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input id="address" type="text">            
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" type="password">
+            </div>
+            <div class="form-group">
+                <button data-previous>Previous</button>
+                <button data-next>Next</button>
+            </div>
+            
+        </div>
+
+        <div class="card" data-step>
+            <div class="form-group">
+                <button data-previous="">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
