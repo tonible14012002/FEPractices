@@ -55,7 +55,8 @@ body {
 .form-group{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    gap: 5px;
 }
 
 .form-group:last-child{
@@ -82,7 +83,7 @@ body {
     font-weight: bolder;
 }
 .card > .form-group:last-child {
-    margin-top: 35px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
