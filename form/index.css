@@ -19,37 +19,32 @@
 
 body {
     background-color: var(--background) ;
+    overflow: hidden;
 }
 
-.card{
-    background-color: white;
-    padding: 15px 20px;
-    width: 50vw;
-    max-width: 350px;
-    min-width: 300px;
-    position: absolute;
+
+.card{ position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(50%,-50%);
+    max-width: 350px;
+    min-width: 300px;
+    width: 50vw;
     background-color: var(--formColor);
-    border-radius: 5px;
     box-shadow: 1px 0 15px -5px;
-    outline: none;
-    display: block;
-    transition: 1s ease-in-out;
+    border-radius: 5px;
+    padding: 15px 20px;
+    transition: 0.2s ease-in-out;
+    z-index: 0;
+    opacity: 0;
+    display: none;
 }
 
 .card.active {
     display: block;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
     opacity: 1;
-}
-
-.card.deactive {
-    transform: translate(-150%, -50%);
-    opacity: 0;
-    display: block;
-    
 }
 
 .step-title {
