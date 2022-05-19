@@ -23,9 +23,7 @@ body {
 
 .card{
     background-color: white;
-
     padding: 15px 20px;
-    display: none;
     width: 50vw;
     max-width: 350px;
     min-width: 300px;
@@ -37,6 +35,9 @@ body {
     border-radius: 5px;
     box-shadow: 1px 0 15px -5px;
     outline: none;
+    display: none;
+    transition: 0.7s ease-in-out;
+    
 }
 
 .card.active {
@@ -66,14 +67,16 @@ body {
 .form-group > input {
     padding: 15px 20px;
     border-radius: 5px;
-    border: solid 1px black;
+    border: solid 1px grey;
     outline: none;
     font-size: 15px;
     font-weight: bold;
     color: grey;
+    transition: 0.7s;
 }
 .form-group > input:hover{
-    transition: 0.4s;
+    
+    border: solid 1px black;
 }
 
 .form-group > label {
@@ -95,16 +98,29 @@ body {
     height: 52.4px;
     font-size: 15px;
     font-weight: bolder;
-    background-color: var(--button);
+    background-color: rgba(244, 166, 136,.9);
     border-radius: 5px;
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     color: var(--label);
     border: none;
+    position: relative;
+    cursor:pointer;
+}
+.form-group > button > div{
+    all: inherit;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    background-color: var(--buttonHover);
+    width: 0;
+    padding: 0;
+    z-index: -1000;
 }
 
-.form-group > button:hover {
-    cursor:pointer;
+.form-group > button:hover > div {
     background-color: var(--buttonHover);
+    width: 100%;
 }
 
 .card:first-child > .form-group:last-child > button {
