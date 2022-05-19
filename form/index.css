@@ -35,13 +35,21 @@ body {
     border-radius: 5px;
     box-shadow: 1px 0 15px -5px;
     outline: none;
-    display: none;
-    transition: 0.7s ease-in-out;
-    
+    display: block;
+    transition: 1s ease-in-out;
 }
 
 .card.active {
     display: block;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+.card.deactive {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+    display: block;
+    
 }
 
 .step-title {
@@ -51,6 +59,9 @@ body {
     font-size: 30px;
     color: var(--label);
     text-transform: uppercase;
+    background-color: var(--button);
+    border-radius: 5px;
+    padding: 0 20px;
 }
 
 .form-group{
