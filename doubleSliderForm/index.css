@@ -1,16 +1,24 @@
+@import url('https://fontsfonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
     color: black;
+    font-family: 'Poppins', sans-serif;;
 }
 
 :root {
-
+    --background: #588157;
+    --button: #3a5a40;
+    --button-hover: #344e41;
+    --overlay : #a3b18a;
+    --form-background: #a3b18a;
 }
 
 body {
-
+    background-color: var(--background);
 }
 
 .container {
@@ -20,23 +28,93 @@ body {
     transform: translate(-50%,-50%);
     display: flex;
     gap: 0;
+    box-shadow: 0 0 20px -5px;
+    width: 500px;
 }
 .form-container{
-    background-color: #e9c46a;
+    background-color: var(--form-background);
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.form-container > h1,.social-container {
-    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    width: 50%;
 }
 
-.form-group{
-    padding: 10px 15px;
+.sign-up-container {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.sign-in-container {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-container > button {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 0 10px;
+    font-weight: bolder;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    margin-top: 35px;
+}
+.form-container > button:hover {
+    outline: none;
+    cursor: pointer;
+}
+
+.form-container > h1 {
+    text-align: center;
+    color: var(--button-hover);
+}
+
+/* form group */
+.form-group {
+    display: flex;
+    flex-direction:  column;
+    margin:  0px 20px;
 }
 
 .social-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 10px;
+    font-size: smaller;
+}
+
+.social-container > a i {
+    color: var(--button-hover);
+}
+
+
+.form-group > label {
+    font-weight: bolder;
+    font-size: small;
+    color: var(--button-hover);
+}
+.form-group > input {
+    outline: none;
+    border: none;
+    padding: 5px 5px;
+    font-size: small;
+    font-weight: bold;
+    color:  var(--button);
+    background-color: var(--form-background);
+    border-bottom: solid 2px var(--background);
+    transition: 0.4s ease-in-out;
+}
+.form-group > input:focus, input:hover{
+    opacity: 1;
+    border-bottom: solid 2px var(--button);
+}
+
+.form-container > a {
+    font-size: smaller;
+    text-align: right;
+    padding: 0 20px;
 }
