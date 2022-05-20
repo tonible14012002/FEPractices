@@ -10,11 +10,14 @@
 }
 
 :root {
-    --background: #588157;
-    --button: #3a5a40;
-    --button-hover: #344e41;
+    --background: #723d46;
+    --button: #7f5539;
+    --button-hover: #472d30;
     --overlay : #a3b18a;
-    --form-background: #a3b18a;
+    --form-background: #e6ccb2;
+    --label: #472d30;
+    --input: #723d46;
+    --input-border: #9c6644;
 }
 
 body {
@@ -29,16 +32,17 @@ body {
     display: flex;
     gap: 0;
     box-shadow: 0 0 20px -5px;
-    width: 500px;
+    border-radius: 10px;
 }
 .form-container{
     background-color: var(--form-background);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding: 1em;
     border-radius: 10px;
     width: 50%;
+    align-items: center;
 }
 
 .sign-up-container {
@@ -51,32 +55,18 @@ body {
     border-bottom-left-radius: 0;
 }
 
-.form-container > button {
-    border: solid 1px;
-    border-radius: 10px;
-    padding: 15px 10px;
-    margin: 0 10px;
-    font-weight: bolder;
-    background-color: var(--button);
-    color: white;
-    border: none;
-    margin-top: 35px;
-}
-.form-container > button:hover {
-    outline: none;
-    cursor: pointer;
-}
+
 
 .form-container > h1 {
     text-align: center;
-    color: var(--button-hover);
+    color: var(--label);
 }
 
 /* form group */
 .form-group {
     display: flex;
     flex-direction:  column;
-    margin:  0px 20px;
+    margin:  0px 30px;
 }
 
 .social-container {
@@ -85,36 +75,59 @@ body {
     justify-content: center;
     gap: 10px;
     font-size: smaller;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: solid 1px var(--button-hover);
+    width: 50%;
 }
 
 .social-container > a i {
-    color: var(--button-hover);
+    color: var(--label);
 }
 
 
 .form-group > label {
     font-weight: bolder;
-    font-size: small;
-    color: var(--button-hover);
+    font-size: medium;
+    color: var(--label);
 }
 .form-group > input {
     outline: none;
     border: none;
     padding: 5px 5px;
-    font-size: small;
-    font-weight: bold;
-    color:  var(--button);
+    font-size:medium;
+    font-weight: 600;
+    color:  var(--input);
     background-color: var(--form-background);
-    border-bottom: solid 2px var(--background);
+    border-bottom: solid 2px var(--input-border);
     transition: 0.4s ease-in-out;
 }
 .form-group > input:focus, input:hover{
     opacity: 1;
-    border-bottom: solid 2px var(--button);
+    border-bottom: solid 2px var(--button-hover);
 }
 
 .form-container > a {
-    font-size: smaller;
+    font-size: 14px;
     text-align: right;
     padding: 0 20px;
+    color: var(--label);
+}
+
+.form-container > button {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 15px 10px;
+    font-weight: bolder;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    margin-top: 35px;   
+    width: 70%;
+    transition: 0.4s ease-in-out;
+}
+.form-container > button:hover {
+    outline: none;
+    cursor: pointer;
+    background-color: var(--button-hover);
 }
