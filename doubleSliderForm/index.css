@@ -23,36 +23,40 @@
 body {
     background-color: var(--background);
 }
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    gap: 0;
-    box-shadow: 0 0 20px -5px;
+    position: relative;
+    box-shadow: 0 0 25px -5px;
     border-radius: 10px;
+    width: 700px;
+    min-width: 550px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
 }
 .form-container{
     background-color: var(--form-background);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 1em;
-    border-radius: 10px;
+    padding: 40px;
     width: 50%;
+    height: 100%;
     align-items: center;
+    position: absolute;
 }
 
 .sign-up-container {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    left: 0;
 }
 
 .sign-in-container {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    right: 0;
 }
 
 
@@ -119,6 +123,7 @@ body {
     border-radius: 10px;
     padding: 15px 10px;
     font-weight: bolder;
+    font-size: larger;
     background-color: var(--button);
     color: white;
     border: none;
@@ -127,6 +132,66 @@ body {
     transition: 0.4s ease-in-out;
 }
 .form-container > button:hover {
+    outline: none;
+    cursor: pointer;
+    background-color: var(--button-hover);
+}
+
+/* Overlay */
+.overlay-container {
+    position: absolute;
+    background-color: #5c8511;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.overlay {
+    width: 200%;
+    height: 100%;
+    background-color: #472d30;
+    position: relative;
+    left: -100%;
+}
+
+.overlay-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.overlay-left {
+    left: 0;
+    background-color: white;
+}
+
+
+.overlay-right {
+    right: 0;
+
+}
+
+.overlay-panel > button {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 15px 10px;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    margin-top: 35px;   
+    width: 70%;
+    transition: 0.4s ease-in-out;
+}
+.overlay-panel > button:hover {
     outline: none;
     cursor: pointer;
     background-color: var(--button-hover);

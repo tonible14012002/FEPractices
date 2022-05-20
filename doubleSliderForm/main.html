@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+<div class="wrapper">
     <div class="container" id="container">
             <!-- sign up form -->
             <form class="form-container sign-up-container" action="">
@@ -28,7 +29,7 @@
                 </div>
                 
                 <a href="#">forgot your password ?</a>
-                <button>Sign in</button>
+                <button>Log in</button>
 
             </form>
 
@@ -58,10 +59,24 @@
             </form>
         
         <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Wellcome back!</h1>
+                    <p>Already have an account?</p>
+                    <button class="ghost">Log in</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Wellcome!</h1>
+                    <p>Enter your personal details to sign up</p>
+                    <button class="ghost">Sign up</button>
+                </div>
+            </div>
             
+
         </div>
     </div>
-
+</div>
     <script src="index.js"></script>
 </body>
 </html>
