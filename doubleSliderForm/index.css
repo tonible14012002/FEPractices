@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+
+}
+
+body {
+
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 0;
+}
+.form-container{
+    background-color: #e9c46a;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-container > h1,.social-container {
+    text-align: center;
+}
+
+.form-group{
+    padding: 10px 15px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

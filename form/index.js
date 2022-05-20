@@ -14,7 +14,6 @@ formSteps.forEach(step=>{
     step.addEventListener("click", e=>{
         if (e.target.matches("[data-next]")){
             e.preventDefault()
-            
             formSteps[currentStep].classList.remove("active")
             Fade(currentStep)
             currentStep += 1;
