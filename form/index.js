@@ -7,7 +7,7 @@ let currentStep = getActiveCard()
 
 if (currentStep < 0){
     currentStep = 0;
-    formSteps[currentStep].classList.add('active')
+    formSteps[currentStep].classList.add('sign-in')
 }
 
 formSteps.forEach(step=>{
