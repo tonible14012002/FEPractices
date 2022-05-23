@@ -10,15 +10,15 @@
 }
 
 :root {
-    --background: #723d46;
-    --button: #7f5539;
-    --button-hover: #472d30;
-    --overlay : #a3b18a;
-    --form-background: #e6ccb2;
-    --label: #472d30;
-    --input: #723d46;
-    --input-border: #9c6644;
-    --overlay-label :#1owefm;
+    --background: #D96098;
+    --button: #D96098;
+    --button-hover: #215459;
+    --overlay : #24A19C;
+    --form-background: #325288;
+    --label: #FAEEE7;
+    --input: #FAEEE7;
+    --input-border: #FAEEE7;
+    --overlay-label :#389393;
 }
 
 body {
@@ -144,7 +144,7 @@ body {
     z-index: 100;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    background-color: rgb(100, 52, 52);
+    background-color: var(--overlay);
 
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .overlay h1, p {
-    color: var(--form-background);
+    color: white;
 }
 
 .right-panel-active .overlay-container {
