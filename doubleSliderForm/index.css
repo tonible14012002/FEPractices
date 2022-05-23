@@ -212,6 +212,7 @@ body {
 
 .right-panel-active .sign-in-container {
     transform: translateX(100%);
+    opacity: 0;
 }
 
 .right-panel-active .sign-up-container {
@@ -220,6 +221,7 @@ body {
     opacity: 1;
     animation: show 0.6s;
 }
+
 
 .overlay-left {
     left: 0;
