@@ -8,26 +8,56 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form action="" class="form-container">
-            <h1 class="title">Sign up</h1>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" type="text">
-            </div>
+    <div class="page-container">
+        <div class="container">
+            <form action="" class="form-container" id="sign-up-form">
+                <h1 class="title">Sign up</h1>
+                <div class="form-group">
+                    <label for="id_username">Username</label>
+                    <input id="id_username" required type="text">
+                    <span class="form-message"></span>
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" type="password">
-            </div>
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    <input id="id_email" type="text" required>
+                    <span class="form-message"></span>
+                </div>
 
-            <div class="form-group">
-                <label for="repeat-password">Repeat password</label>
-                <input id="repeat-password" type="password">
-            </div>
+                <div class="form-group">
+                    <label for="id_password">Password</label>
+                    <input id="id_password" type="password" required>
+                    <span class="form-message"></span>
+                </div>
 
-            <button class="submit">Submit</button>
-        </form>
+                <div class="form-group">
+                    <label for="id_repeat-password">Password confirm</label>
+                    <input id="id_repeat-password" type="password" required>
+                    <span class="form-message"></span>
+                </div>
+
+                <button class="submit">Submit</button>
+            </form>
+        </div>    
     </div>
+
+    <script src="validator.js"></script>
+    <script>
+        const val= new Validator({
+            form: "#sign-up-form",
+            errorSelector: '.form-message',
+            rules: [
+                // return css selector and test function.
+                Validator.isRequired('#id_username'),
+                Validator.isRequired('#id_email'),
+                Validator.isRequired('#id_password'),
+                Validator.isRequired('#id_repeat-password'),
+                Validator.isEmail('#id_email'),
+                Validator.minLength('#id_password',8),
+                Validator.minLength('#id_repeat-password',8)
+            ]
+        })
+    </script>
+
 </body>
 </html>

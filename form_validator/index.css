@@ -19,8 +19,8 @@
     --input-hover: #6c757d86 ;
 }
 
-body {
-    display:  flex;
+.page-container {
+    display: flex;
     justify-content: center;
     height: 100vh;
     background-color: var(--background);
@@ -33,7 +33,7 @@ body {
     min-height: 300px;
     width: 50vh;
     min-width: 300px;
-    border-radius: 30px;
+    border-radius: 25px;
     box-shadow: 0 10px 60px -10px;
 }
 
@@ -104,4 +104,10 @@ body {
     cursor: pointer;
     background-color: var(--button-hover);
 
+}
+
+
+.invalid span {
+    font-size: small;
+    color: var(--button);
 }
