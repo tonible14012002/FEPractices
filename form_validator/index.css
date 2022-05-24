@@ -30,7 +30,6 @@ body {
 .container {
     background-color: var(--form-background);
     margin: auto;
-    height: 50vh;
     min-height: 300px;
     width: 50vh;
     min-width: 300px;
@@ -87,9 +86,11 @@ body {
 /* submit button */
 .form-container .submit {
     width: 80%;
-    height: 12%;
-    margin: auto;
+    height: 6vh;
+    min-height: 35px;
+    
     border-radius: 5px 5px 15px 15px;
+    margin: 2vh auto;
     margin-bottom: 10%;
     outline: none;
     border:  none;
