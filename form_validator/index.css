@@ -58,11 +58,12 @@
 .navbar a:hover, label:hover {
     color:  var(--background);
 }
-#profile-group {
+.profile-group {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    height: 60px;
 }
 
 #profile-avatar {
@@ -82,9 +83,32 @@
 }
 
 
+/* sub navbar */
+
+.navbar-group:last-child {
+    position: relative;
+}
 
 
 
+.sub-navbar {
+    display: none;
+    position: absolute;
+    background-color: var(--form-background);
+    top: 100%;
+    left: 0;
+    width: 400px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sub-navbar .profile-group {
+    padding: 0 15px;
+}
 
 /* page  */
 .page-container {
