@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="../fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="../themify-icons/themify-icons.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,29 +19,33 @@
                 <div class="navbar-element"><a href=""><i></i>Contact</a></div>
                 <div class="navbar-element"><a href=""><i></i>Schedule</a></div>
             </div>
-            <div class="navbar-group">
-                <div class="profile-group" class="navbar-element">
-                        <a href="" id="profile-avatar"><i class="fa-solid fa-user-astronaut"></i></a>
-                        <label for="profile">Nam Anh</label>
+            <div class="navbar-group profile">
+                <div class="navbar-element ">
+                        <a class="nav-icon"><i class="fa-solid fa-user-astronaut"></i></a>
+                        <label id="user-name">Nam Anh <i style="margin-left: 5px; " class="ti-angle-down"></i>
+                            <nav class="sub-navbar">
+                                <div class="navbar-group">
+                                    <div class="navbar-element">
+                                        <a class="nav-icon"><i class="fa-solid fa-user-astronaut"></i></a>
+                                        <label>Settings</label>
+                                    </div>
+            
+                                    <div class="navbar-element">
+                                        <a class="nav-icon"><i class="fa-solid fa-user-astronaut"></i></a>
+                                        <label>Sign up</label>
+                                    </div>
+            
+                                    <div class="navbar-element">
+                                        <a class="nav-icon"><i class="fa-solid fa-user-astronaut"></i></a>
+                                        <label>Log out</label>
+                                    </div>
+                                </div>
+                            </nav>
+                        </label>
                 </div>
-                <nav class="sub-navbar">
-                    <div class="profile-group" class="navbar-element">
-                        <a href=""><i class="fa-solid fa-user-astronaut choice-icon"></i></a>
-                        <label for="">Settings</label>
-                    </div>
-                    <div class="profile-group" class="navbar-element">
-                    <a href=""><i class="fa-solid fa-user-astronaut choice-icon"></i></a>
-                        <label for="">Logout</label>
-                    </div>
-                    <div class="profile-group" class="navbar-element">
-                        <a href=""><i class="fa-solid fa-user-astronaut choice-icon"></i></a>
-                        <label for="">Sign up</label>
-                    </div>
-                </nav>
             </div>
         </nav>
     </div>
-
 
     <div class="page-container">
         <div class="container">
@@ -79,7 +84,7 @@
         
     </div>
 
-
+    <script src="navbar.js"></script>
     <script src="validator.js"></script>
     <script>
         Validator({

@@ -23,12 +23,13 @@
 
 .header{
     position: fixed;
-    z-index: 1;
+    z-index:  1000;
     background-color: var(--form-background);
     width: 100%;
     height: 60px;    
     padding: 0 50px;
     box-shadow: 0 0 5px 0;
+    border-bottom: solid 1px;
 }
 
 .navbar {
@@ -46,69 +47,93 @@
     gap: 3vw;
 }
 
-.navbar a, label {
+.navbar a, .navbar label, .navbar span {
     color: white;   
     transition: all 0.2s ease-in-out; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .page-logo {
     font-size: 40px;
 }
 
-.navbar a:hover, label:hover {
+.navbar a:hover,.navbar label:hover,.navbar span:hover {
     color:  var(--background);
 }
-.profile-group {
+
+.navbar-element {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 60px;
 }
 
-#profile-avatar {
-    display: block;
+.nav-icon {
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background);
 }
 
-#profile-avatar:hover {
-    color: white;
+.navbar-group.profile {
+    height: 100%;
+}
+
+.navbar-group.profile a:hover {
+    color: white ;
     background-color: var(--button-hover);
+    cursor: pointer;
 }
 
-
+.navbar-group.profile .navbar-element {
+    height: 100%;
+    min-width: 150px;
+}
 /* sub navbar */
 
-.navbar-group:last-child {
+#user-name {
     position: relative;
+    height: 100%;
 }
 
-
-
-.sub-navbar {
-    display: none;
+.navbar-group .sub-navbar {
     position: absolute;
     background-color: var(--form-background);
     top: 100%;
-    left: 0;
-    width: 400px;
-    border: solid 1px black;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: space-between;
-    align-items: flex-start;
+    left: -50px;
+    transform: translateX(500px);
+    width: 1000px;
+    box-shadow: -5px 5px 10px -5px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+    transition: all 0.4s ease-in-out;
 }
 
-.sub-navbar .profile-group {
-    padding: 0 15px;
+.sub-navbar .navbar-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 0px;
 }
+
+#user-name:hover .sub-navbar {
+    transform: translateX(0);
+}
+
+.sub-navbar span:hover,.sub-navbar label:hover {
+    cursor: pointer;
+}
+
 
 /* page  */
 .page-container {
