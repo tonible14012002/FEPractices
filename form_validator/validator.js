@@ -1,4 +1,3 @@
-
 function Validator (option) {
     var formElement = document.querySelector(option.form)
     if (formElement){
@@ -35,30 +34,41 @@ Validator.validate = function(inputElement, rule, errorSelector) {
 }
 
 // rules decleration
-Validator.isRequired = (selector) => {
+Validator.isRequired = (selector, errorMsg) => {
     return {
         selector:selector,
         test: function(value){
-            return value.trim() ? undefined: 'This field is required.'
+            return value.trim() ? undefined: errorMsg || 'This field is required.'
         }
     }
 }
 
-Validator.isEmail = (selector) => {
+Validator.isEmail = (selector, errorMsg) => {
     return {
         selector: selector,
         test: function (value) {
             var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-            return regex.test(value) ? undefined : 'Input your email address.'
+            return regex.test(value) ? undefined : errorMsg || 'Input your email address.'
         }
     }
 }
 
-Validator.minLength = (selector, minLength) => {
+Validator.minLength = (selector, minLength , errorMsg) => {
     return {
         selector: selector,
         test: (value) => {
-            return value.length >= minLength ? undefined : `at least ${minLength} characters for password.`
+            return value.length >= minLength ? undefined : errorMsg || `at least ${minLength} characters for password.`
+        }
+    }
+}
+
+Validator.confirm = (selector, getElement, errorMsg) => {
+    return {
+        selector: selector,
+        test: (value) => {
+            var e = getElement().value
+            console.log(e)
+            return value == e ? undefined : errorMsg || 'Password doesnt fit'
         }
     }
 }
