@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="toast">
+    </div>
+
 
     <div class="header">
         <nav class="navbar">
@@ -53,25 +56,25 @@
                 <h1 class="title">Sign up</h1>
                 <div class="form-group">
                     <label for="id_username">Username</label>
-                    <input id="id_username" required type="text">
+                    <input id="id_username"  type="text">
                     <span class="form-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="id_email">Email</label>
-                    <input id="id_email" type="text" required>
+                    <input id="id_email" type="text" >
                     <span class="form-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="id_password">Password</label>
-                    <input id="id_password" type="password" required>
+                    <input id="id_password" type="password" >
                     <span class="form-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="id_repeat-password">Password confirm</label>
-                    <input id="id_repeat-password" type="password" required>
+                    <input id="id_repeat-password" type="password">
                     <span class="form-message"></span>
                 </div>
 
@@ -84,7 +87,7 @@
         
     </div>
 
-    <script src="navbar.js"></script>
+    
     <script src="validator.js"></script>
     <script>
         Validator({
@@ -104,7 +107,23 @@
                 })
             ]
         })
+
+        const submitBtns = [...document.querySelectorAll('.submit')]
+        submitBtns.forEach(btn=>{
+            btn.addEventListener('click', e=>{
+                e.preventDefault()
+                toast({
+                    selector:'#toast',
+                    title:'Success',
+                    message: 'Submit successfully.',
+                    type: 'success',
+                    duration: 4000
+                })
+            })
+        })
+        
     </script>
+    <script src="toast.js"></script>
 
 </body>
 </html>

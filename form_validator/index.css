@@ -18,6 +18,10 @@
     --button-label: white;
     --button-hover: #2a9d90a8;
     --input-hover: #6c757d86 ;
+
+    --error-background: #a24c4c;
+    --warn-background: rgb(223, 215, 155);
+    --alert-background:#c37474 ;
 }
 
 
@@ -62,6 +66,7 @@
 
 .navbar a:hover,.navbar label:hover,.navbar span:hover {
     color:  var(--background);
+    cursor: pointer;
 }
 
 .navbar-element {
@@ -126,7 +131,7 @@
     padding: 20px 0px;
 }
 
-#user-name:hover .sub-navbar {
+#user-name.active .sub-navbar {
     transform: translateX(0);
 }
 
@@ -231,4 +236,80 @@
 
 .content-container {
     height: 600px;
+}
+
+/* toast message */
+#toast {
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    transition: linear;
+}
+
+.toast {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(200%);
+}
+
+.toast.info,
+.toast.success,
+.toast.error,
+.toast.warn {
+    transform: translateX(0);
+}
+
+.toast__icon ,.toast__close{
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--form-background);
+    /* color: #ffffff; */
+    font-size: x-large;
+    /* margin-right: 5px; */
+}
+
+.toast__close:hover {
+    cursor: pointer;
+    color: var(--button-hover);
+}
+
+.toast.success .toast__icon {
+    color: var(--toast-success-icon);
+}
+
+.toast.info .toast__icon {
+    color: var(--toast-info-icon);
+}
+
+.toast.error .toast__icon {
+    color: var(--toast-error-icon);
+}
+
+.toast.warn .toast__icon {
+    color: var(--toast-warb-icon);
+}
+
+.toast__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0 10px;
+    min-width: 280px;
+}
+.toast__body .title {
+    color: var(--background);
 }
